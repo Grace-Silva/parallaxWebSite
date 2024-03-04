@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --textColor: #fafafa;
+    --yellow: #FFFBEE;
+    --blue: #020912;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Rubik", sans-serif;
+    letter-spacing: 1px;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2em;
+    background: transparent;
+    z-index: 100;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo a span{
+    color: var(--yellow);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+header .navigation ul{
+    display: flex;
+    gap: 2em;
+}
+
+header .navigation ul a{
+    border: none;
+    background: transparent;
+    padding: 12px;
+    border-radius: 16px;
+    color: var(--yellow);
+    font-weight: 600;
+    font-size: 16px;
+    transition: all ease-in-out .5s;
+}
+header .navigation ul a:hover{
+    color: var(--blue);
+    background: var(--yellow);
+}
+
+/* parallax */
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: var(--blue);
+    text-shadow: 2px 4px 5px var(--yellow);
+}
+
+.parallax img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.parallax img#gate-left{
+    position: fixed;
+    transform: translateX(-282px);
+}
+
+.parallax img#gate-right{
+    position: fixed;
+    transform: translateX(305px);
+}
+
+.scrolling{
+    background: var(--blue);
+    padding: 2em 3em;
+    position: relative;
+    z-index: 1000;
+}
+
+.scrolling h2{
+    font-size: 2em;
+    color: var(--yellow);
+    margin-bottom: 1em;
+}
+
+.scrolling p{
+    color: var(--yellow);
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: justify;
+}
